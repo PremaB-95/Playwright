@@ -2,7 +2,7 @@ from playwright.sync_api import sync_playwright
 from playwright.sync_api import expect
 with sync_playwright() as playwright:
     browser = playwright.chromium.launch(headless=False)
-
+    # Login > Checkout
     page = browser.new_page()
     page.goto("https://www.saucedemo.com")
     page.locator("#user-name").fill("standard_user")
